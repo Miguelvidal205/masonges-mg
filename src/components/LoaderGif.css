@@ -1,0 +1,10 @@
+.container {
+    background-color: #cccccc;
+}
+
+.loader {
+    right: 40%;
+    bottom: 30%;
+    position: absolute;
+    z-index: 100;
+  }
