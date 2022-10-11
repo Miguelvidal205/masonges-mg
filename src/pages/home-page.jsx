@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import AppBarComponent from "../components/AppBar";
-import Banner from "../components/banner";
+import Banner from "../components/Banner";
 import LoaderGif from "../components/LoaderGif";
 
 export default function HomePage() {
@@ -17,7 +17,6 @@ export default function HomePage() {
     return (
         <>
         {loader  ? <LoaderGif /> : null}
-            <AppBarComponent />
             <Banner />
         </>
     )

@@ -11,12 +11,25 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import logo from '../media/icons/masonsmg.ico'
+import { useHistory } from 'react-router-dom';
 
-const pages = ['INICIO', 'QUINES SOMOS', 'NUESTROS PRINCIPIOS', 'FOTOS', 'LINKS', 'MFFA','CONTACTO'];
+const pages =
+  ['INICIO', 'QUINES SOMOS', 'NUESTROS PRINCIPIOS', 'FOTOS', 'LINKS', 'MFFM', 'CONTACTO'];
 
-const AppBarComponent = () => {
+
+export default function AppBarComponent() {
+  const history = useHistory();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-
+  const itemsList = [
+  {
+    text: "INICIO",
+    onClick: () => history.push("/")
+  },
+  {
+    text: "LINKS",
+    onClick: () => history.push("/links")
+  },
+];
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -101,7 +114,7 @@ const AppBarComponent = () => {
           >
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
+            {itemsList.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
@@ -116,4 +129,3 @@ const AppBarComponent = () => {
     </AppBar>
   );
 };
-export default AppBarComponent;
