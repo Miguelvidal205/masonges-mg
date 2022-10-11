@@ -88,11 +88,14 @@ export default function AppBarComponent() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+              {itemsList.map((item) => {
+                const { text, onClick } = item;
+                <MenuItem key={item}
+                  onClick={onClick}>
+                  <Typography textAlign="center">{text}</Typography>
                 </MenuItem>
-              ))}
+              }
+              )}
             </Menu>
           </Box>
           <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
@@ -114,15 +117,17 @@ export default function AppBarComponent() {
           >
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {itemsList.map((page) => (
+            {itemsList.map((item) => {
+              const { text, onClick } = item;
               <Button
-                key={page}
-                onClick={handleCloseNavMenu}
+                key={item}
+                onClick={onClick}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                {page}
+                {text}
               </Button>
-            ))}
+            }
+              )}
           </Box>
         </Toolbar>
       </Container>
