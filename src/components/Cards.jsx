@@ -3,20 +3,31 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { Button, CardActionArea, CardActions } from '@mui/material';
+import { Button, CardActionArea, CardActions, Paper } from '@mui/material';
+import './Cards.css'
+
 
 export default function CardsComponents(props) {
     const { img, description, title, link, children } = props
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
+    <Paper className='card'>
+    <Card className='container'
+    // sx={{ 
+    //   maxWidth: 290,
+    //   bgcolor: '#46505A', 
+    //   p: 0.5, 
+    //   boxShadow: 10,
+    //   borderRadius: 3,
+    // }}
+    >
+      <CardActionArea >
         <CardMedia
           component="img"
-          height="140"
+          height="220"
           image={img}
         />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+        <CardContent className='cardAction'>
+          <Typography gutterBottom variant="h6" component="div">
             {title}
           </Typography>
           <Typography variant="body2" color="text.secondary">
@@ -24,11 +35,7 @@ export default function CardsComponents(props) {
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          {link}
-        </Button>
-      </CardActions>
     </Card>
+    </Paper>
   );
 }

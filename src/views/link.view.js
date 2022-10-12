@@ -1,6 +1,5 @@
 import AppBarComponent from "../components/AppBar";
-import HomePage from "../pages/home-page";
-import LinksPage from "../pages/links-page";
+import {LinksPage} from "../pages/links-page";
 
 function LinkView() {
   return (

@@ -11,24 +11,26 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import logo from '../media/icons/masonsmg.ico'
-import { useHistory } from 'react-router-dom';
 
 const pages =
   ['INICIO', 'QUINES SOMOS', 'NUESTROS PRINCIPIOS', 'FOTOS', 'LINKS', 'MFFM', 'CONTACTO'];
 
 
 export default function AppBarComponent() {
-  const history = useHistory();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const itemsList = [
   {
-    text: "INICIO",
-    onClick: () => history.push("/")
+    text: 'INICIO',
+    href: '/homepage'
   },
   {
-    text: "LINKS",
-    onClick: () => history.push("/links")
+    text: 'LINKS',
+    href: '/links'
   },
+  {
+    text: 'FOTOS',
+    href: '/photos'
+  }
 ];
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -88,14 +90,15 @@ export default function AppBarComponent() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {itemsList.map((item) => {
+              {/* {itemsList.map((item) => {
                 const { text, onClick } = item;
-                <MenuItem key={item}
+                <MenuItem 
+                  key={text}
                   onClick={onClick}>
                   <Typography textAlign="center">{text}</Typography>
                 </MenuItem>
               }
-              )}
+              )} */}
             </Menu>
           </Box>
           <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
@@ -117,16 +120,16 @@ export default function AppBarComponent() {
           >
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {itemsList.map((item) => {
-              const { text, onClick } = item;
+            {itemsList.map((item, index) => {
+              return (
               <Button
-                key={item}
-                onClick={onClick}
+                key={index}
+                href={item.href}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                {text}
+                {item.text}
               </Button>
-            }
+              )}
               )}
           </Box>
         </Toolbar>

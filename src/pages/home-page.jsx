@@ -3,7 +3,7 @@ import AppBarComponent from "../components/AppBar";
 import Banner from "../components/Banner";
 import LoaderGif from "../components/LoaderGif";
 
-export default function HomePage() {
+export const HomePage = () => {
     const [loader, setLoader] = useState(false);
 
     useEffect(() => {   

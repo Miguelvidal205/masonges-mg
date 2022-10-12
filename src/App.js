@@ -1,11 +1,11 @@
 import './App.css';
 import React from 'react';
-import HomeView from './views/home.view';
+import AppRouters from './routers/AppRouters';
 
 function App() {
 
   return (
-      <HomeView />
+    <AppRouters />
   );
 }
 

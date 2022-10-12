@@ -1,17 +1,17 @@
 import AppBarComponent from "../components/AppBar";
-import { HomePage } from "../pages/home-page";
+import PhotosPage from "../pages/photos-page";
 
-function HomeView() {
+function PhotosView() {
   return (
     <div className="App">      
     <header>
       <AppBarComponent />
       </header>
         <div>
-        <HomePage />
+        <PhotosPage />
         </div>
     </div>
   );
 }
 
-export default HomeView;
+export default PhotosView;
