@@ -6,8 +6,6 @@ export const Box = styled.div`
   position: flex;
   bottom: 0;
   width: 100%;
-  
-   
   @media (max-width: 100px) {
     padding: 70px 30px;
   }
@@ -43,7 +41,7 @@ export const Row = styled.div`
    
 export const FooterLink = styled.a`
   color: #fff;
-  margin-bottom: 20px;
+  margin-bottom: 1px;
   font-size: 18px;
   text-decoration: none;
    
@@ -56,6 +54,6 @@ export const FooterLink = styled.a`
 export const Heading = styled.p`
   font-size: 24px;
   color: #fff;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   font-weight: bold;
 `;
