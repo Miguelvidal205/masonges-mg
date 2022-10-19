@@ -8,13 +8,8 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import logo from '../media/icons/masonsmg.ico'
-
-const pages =
-  ['INICIO', 'QUINES SOMOS', 'NUESTROS PRINCIPIOS', 'FOTOS', 'LINKS', 'MFFM', 'CONTACTO'];
-
 
 export default function AppBarComponent() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -44,23 +39,6 @@ export default function AppBarComponent() {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
         <img src={logo} /> 
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-          </Typography>
-
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"

@@ -4,6 +4,6 @@ import './LoaderGif.css'
 export default function LoaderGif() {
 
   return (
-      <img src={logo} alt="loading..." className='loader'/>
+      <img src={logo} alt="loading..." align="center" className='loader'/>
   );
 }

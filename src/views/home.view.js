@@ -1,4 +1,5 @@
 import AppBarComponent from "../components/AppBar";
+import FooterPage from "../pages/footer-page";
 import { HomePage } from "../pages/home-page";
 
 function HomeView() {
@@ -10,6 +11,7 @@ function HomeView() {
         <div>
         <HomePage />
         </div>
+        <FooterPage />
     </div>
   );
 }

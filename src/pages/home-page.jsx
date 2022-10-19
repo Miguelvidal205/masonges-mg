@@ -1,3 +1,4 @@
+import { Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import AppBarComponent from "../components/AppBar";
 import Banner from "../components/Banner";
@@ -18,6 +19,9 @@ export const HomePage = () => {
         <>
         {loader  ? <LoaderGif /> : null}
             <Banner />
+            <Typography>
+                PROXIMOS EVENTOS
+            </Typography>
         </>
     )
 }
